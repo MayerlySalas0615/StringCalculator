@@ -96,3 +96,4 @@ C:\Users\mayerly.salas\RiderProjects\StringCalculator\StringCalculator\obj\Debug
 C:\Users\mayerly.salas\RiderProjects\StringCalculator\StringCalculator\obj\Debug\net9.0\StringCalculator.pdb
 C:\Users\mayerly.salas\RiderProjects\StringCalculator\StringCalculator\obj\Debug\net9.0\StringCalculator.genruntimeconfig.cache
 C:\Users\mayerly.salas\RiderProjects\StringCalculator\StringCalculator\obj\Debug\net9.0\ref\StringCalculator.dll
+C:\Users\mayerly.salas\RiderProjects\StringCalculator\StringCalculator\obj\Debug\net9.0\StringCalculator.sourcelink.json

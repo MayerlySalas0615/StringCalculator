@@ -16,8 +16,8 @@ public class CalculatorTest
 
     }
 
-    private object CadenaStringDevolver(string input)
+    private string CadenaStringDevolver(string input)
     {
-        throw new NotImplementedException();
+        return input;
     }
 }
