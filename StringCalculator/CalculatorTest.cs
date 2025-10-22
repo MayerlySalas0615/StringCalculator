@@ -27,6 +27,19 @@ public class CalculatorTest
         //Assert
         Assert.Equal(cadena, resultado);
     }
+
+    [Fact]
+    public void Cadena_String_1y2_Devuelve_Suma_es_3()
+    {
+        //Arrange
+        string cadena = "1,2";
+        
+        //Act
+        string resultado = CadenaStringDevolver(cadena);
+        
+        //Assert
+        Assert.Equal("3", resultado);
+    }
     
     private string CadenaStringDevolver(string cadena)
     {
