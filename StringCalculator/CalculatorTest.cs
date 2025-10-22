@@ -22,19 +22,14 @@ public class CalculatorTest
         string cadena = "-2";
         
         //Act
-        string resultado = CadenaNegativos(cadena);
+        string resultado = CadenaStringDevolver(cadena);
         
         //Assert
         Assert.Equal(cadena, resultado);
     }
-
-    private string CadenaNegativos(string cadena)
+    
+    private string CadenaStringDevolver(string cadena)
     {
         return cadena;
-    }
-
-    private string CadenaStringDevolver(string input)
-    {
-        return input;
     }
 }
