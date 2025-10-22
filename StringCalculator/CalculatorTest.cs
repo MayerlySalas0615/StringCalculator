@@ -56,10 +56,18 @@ public class CalculatorTest
     
     private string CadenaStringDevolver(string cadena)
     {
-        if (cadena == "1,2" || cadena == "1+2")
+        if (cadena.Contains(","))
         {
-            return "3";
+            var numeros = cadena.Split(',');
+            return (int.Parse(numeros[0]) + int.Parse(numeros[1])).ToString();
         }
+        
+        if (cadena.Contains("+"))
+        {
+            var numeros = cadena.Split('+');
+            return (int.Parse(numeros[0]) + int.Parse(numeros[1])).ToString();
+        }
+        
         return cadena;
     }
 }
