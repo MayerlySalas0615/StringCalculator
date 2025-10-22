@@ -5,4 +5,7 @@ Calculadora Sencilla
     [x] cadena string -2 devuelve
     
     [x] cadena "1,2" los suma  y devuelve 3
-    [] cadena "1+2" los suma  y devuelve 3
+    [x] cadena "1+2" los suma  y devuelve 3
+    
+    [] cadena "4-2" devuelva el resultado 2
+    [] cadena "40-2" devuelva el resultado 38

@@ -54,6 +54,19 @@ public class CalculatorTest
         Assert.Equal("3", resultado);
     }
     
+    [Fact]
+    public void Cadena_String_4menos2_Devuelve_Resta_2()
+    {
+        //Arrange
+        string cadena = "4-2";
+        
+        //Act
+        string resultado = CadenaStringDevolver(cadena);
+        
+        //Assert
+        Assert.Equal("2", resultado);
+    }
+    
     private string CadenaStringDevolver(string cadena)
     {
         if (cadena.Contains(","))
