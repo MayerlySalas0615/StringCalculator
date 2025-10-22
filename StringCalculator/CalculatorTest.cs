@@ -16,8 +16,21 @@ public class CalculatorTest
 
     }
 
+    [Fact]
+    public void Cadena_String_2_Devuelve_2()
+    {
+        //Arrange
+        string input = "2";
+        
+        //Act
+        var resultado= CadenaStringDevolver(input);
+        
+        //Assert
+        Assert.Equal(input, resultado);
+    }
+
     private string CadenaStringDevolver(string input)
     {
-        return input;
+        return "1";
     }
 }
