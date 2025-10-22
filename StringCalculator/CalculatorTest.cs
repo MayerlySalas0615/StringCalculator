@@ -29,7 +29,7 @@ public class CalculatorTest
     }
 
     [Fact]
-    public void Cadena_String_1y2_Devuelve_Suma_es_3()
+    public void Cadena_String_1y2_Devuelve_Suma_da_3()
     {
         //Arrange
         string cadena = "1,2";
