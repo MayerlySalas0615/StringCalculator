@@ -2,35 +2,20 @@
 
 public class CalculatorTest
 {
-    [Fact]
-    public void Cadena_String_1_Devuelve_1()
+    [Theory]
+    [InlineData("1")]
+    [InlineData("2")]
+    public void Cadena_String_1_Devuelve_1(string cadenaTexto)
     {
-        //Arrange
-        string input = "1";
-        
         //Act
-        var resultado= CadenaStringDevolver(input);
+        var resultado= CadenaStringDevolver(cadenaTexto);
         
         //Assert
-        Assert.Equal(input, resultado);
-
+        Assert.Equal(cadenaTexto, resultado);
     }
-
-    [Fact]
-    public void Cadena_String_2_Devuelve_2()
-    {
-        //Arrange
-        string input = "2";
-        
-        //Act
-        var resultado= CadenaStringDevolver(input);
-        
-        //Assert
-        Assert.Equal(input, resultado);
-    }
-
+    
     private string CadenaStringDevolver(string input)
     {
-        return "1";
+        return input;
     }
 }
