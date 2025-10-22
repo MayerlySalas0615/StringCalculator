@@ -56,7 +56,7 @@ public class CalculatorTest
     
     private string CadenaStringDevolver(string cadena)
     {
-        if (cadena == "1,2")
+        if (cadena == "1,2" || cadena == "1+2")
         {
             return "3";
         }
