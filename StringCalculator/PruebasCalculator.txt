@@ -1,0 +1,7 @@
+Calculadora Sencilla
+
+    [] cadena string 1 devuelve 1
+    [] cadena string 456 devuelve 456
+    [] cadena string -2 devuelve
+    
+    [] cadena "1,2" los suma  y devuelve 3
