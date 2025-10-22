@@ -30,7 +30,7 @@ public class CalculatorTest
 
     private string CadenaNegativos(string cadena)
     {
-        throw new NotImplementedException();
+        return cadena;
     }
 
     private string CadenaStringDevolver(string input)
