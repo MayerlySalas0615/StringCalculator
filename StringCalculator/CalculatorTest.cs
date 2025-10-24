@@ -27,7 +27,7 @@ public class CalculatorTest
         //Assert
         Assert.Equal(cadena, resultado);
     }
-
+    
     [Fact]
     public void Cadena_String_1y2_Devuelve_Suma_da_3()
     {
@@ -92,11 +92,12 @@ public class CalculatorTest
         if (cadena.Contains("-"))
         {
             var numeros = cadena.Split('-');
-            
+
             int num1 = string.IsNullOrWhiteSpace(numeros[0]) ? 0 : int.Parse(numeros[0]);
             int num2 = string.IsNullOrWhiteSpace(numeros[1]) ? 0 : int.Parse(numeros[1]);
-            
-            return (num1 - num2).ToString();
+            int num3 = numeros.Length > 2 && !string.IsNullOrWhiteSpace(numeros[2]) ? int.Parse(numeros[2]) : 0;
+
+            return (num1 - num2 - num3).ToString();
         }
         
         return cadena;
