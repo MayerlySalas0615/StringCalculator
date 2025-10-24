@@ -69,19 +69,10 @@ public class CalculatorTest
     
     private string CadenaStringDevolver(string cadena)
     {
-        
-        int num1 = 0;
-        int num2 = 0;
-
-        if (cadena.Contains(","))
+        if (cadena.Contains(",") || cadena.Contains("+"))
         {
-            var numeros = cadena.Split(',');
-            return (int.Parse(numeros[0]) + int.Parse(numeros[1])).ToString();
-        }
-        
-        if (cadena.Contains("+"))
-        {
-            var numeros = cadena.Split('+');
+            string separador = cadena.Contains(",") ? "," : "+";
+            var numeros = cadena.Split( separador );
             return (int.Parse(numeros[0]) + int.Parse(numeros[1])).ToString();
         }
         
@@ -89,8 +80,8 @@ public class CalculatorTest
         {
             var numeros = cadena.Split('-');
             
-            num1 = string.IsNullOrWhiteSpace(numeros[0]) ? 0 : int.Parse(numeros[0]);
-            num2 = string.IsNullOrWhiteSpace(numeros[1]) ? 0 : int.Parse(numeros[1]);
+            int num1 = string.IsNullOrWhiteSpace(numeros[0]) ? 0 : int.Parse(numeros[0]);
+            int num2 = string.IsNullOrWhiteSpace(numeros[1]) ? 0 : int.Parse(numeros[1]);
             
             return (num1 - num2).ToString();
         }
