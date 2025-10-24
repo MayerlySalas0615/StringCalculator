@@ -40,7 +40,7 @@ public class CalculatorTest
         //Assert
         Assert.Equal("3", resultado);
     }
-
+    
     [Fact]
     public void Cadena_String_1mas2_Devuelve_Suma_da_3()
     {
@@ -69,6 +69,10 @@ public class CalculatorTest
     
     private string CadenaStringDevolver(string cadena)
     {
+        
+        int num1 = 0;
+        int num2 = 0;
+
         if (cadena.Contains(","))
         {
             var numeros = cadena.Split(',');
@@ -79,6 +83,16 @@ public class CalculatorTest
         {
             var numeros = cadena.Split('+');
             return (int.Parse(numeros[0]) + int.Parse(numeros[1])).ToString();
+        }
+        
+        if (cadena.Contains("-"))
+        {
+            var numeros = cadena.Split('-');
+            
+            num1 = string.IsNullOrWhiteSpace(numeros[0]) ? 0 : int.Parse(numeros[0]);
+            num2 = string.IsNullOrWhiteSpace(numeros[1]) ? 0 : int.Parse(numeros[1]);
+            
+            return (num1 - num2).ToString();
         }
         
         return cadena;
