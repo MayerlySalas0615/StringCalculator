@@ -66,6 +66,19 @@ public class CalculatorTest
         //Assert
         Assert.Equal("2", resultado);
     }
+
+    [Fact]
+    public void Cadena_String_menos4menos10DevolverMenos14()
+    {
+        //Arrange
+        string cadena = "-4-10";
+        
+        //Act
+        string resultado = CadenaStringDevolver(cadena);
+        
+        //Assert
+        Assert.Equal("-14", resultado);
+    }
     
     private string CadenaStringDevolver(string cadena)
     {
