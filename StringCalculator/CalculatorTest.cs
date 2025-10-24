@@ -6,7 +6,7 @@ public class CalculatorTest
     [InlineData("1")]
     [InlineData("2")]
     [InlineData("456")]
-    public void Cadena_String_1_Devuelve_1(string cadenaTexto)
+    public void CadenaStringDevuelveString(string cadenaTexto)
     {
         //Act
         var resultado= CadenaStringDevolver(cadenaTexto);
@@ -28,25 +28,11 @@ public class CalculatorTest
         Assert.Equal(cadena, resultado);
     }
     
-    [Fact]
-    public void Cadena_String_1y2_Devuelve_Suma_da_3()
+    [Theory]
+    [InlineData("1,2")]
+    [InlineData("1+2")]
+    public void Cadena_String_1mas2_Devuelve_Suma3(string cadena)
     {
-        //Arrange
-        string cadena = "1,2";
-        
-        //Act
-        string resultado = CadenaStringDevolver(cadena);
-        
-        //Assert
-        Assert.Equal("3", resultado);
-    }
-    
-    [Fact]
-    public void Cadena_String_1mas2_Devuelve_Suma_da_3()
-    {
-        //Arrange
-        string cadena = "1+2";
-        
         //Act
         string resultado = CadenaStringDevolver(cadena);
         
@@ -80,8 +66,10 @@ public class CalculatorTest
         Assert.Equal("-14", resultado);
     }
     
+
     private string CadenaStringDevolver(string cadena)
     {
+        
         if (cadena.Contains(",") || cadena.Contains("+"))
         {
             string separador = cadena.Contains(",") ? "," : "+";
